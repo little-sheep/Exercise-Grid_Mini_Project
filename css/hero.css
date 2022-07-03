@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&display=swap");
+
+:root {
+  --color-orange: #f15025;
+  --color-grey: #afafaf;
+  --color-black: #222;
+  --color-white-1: #fff;
+  --color-white-2: #f7f7f7;
+  --letter-spacing: 2px;
+  --transition: all 0.3s linear;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  font-family: "Fira Code", monospace;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* .clearfix::before,
+.clearfix::after {
+  content: "";
+  clear: both;
+} */
+
+.all {
+  display: grid;
+  grid-template-rows: 100vh 10rem;
+  /* gap: 3rem; */
+}
+
+.cover {
+  min-height: 100vh;
+  background: var(--color-orange);
+  padding: 2rem;
+}
+
+.cover-center {
+  /* border: 2px solid white; */
+  width: 80vw;
+  margin: 0rem auto;
+  min-width: 15rem;
+}
+
+.cover-grid {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: center;
+}
+
+.cover-title,
+.cover-content {
+  margin-bottom: 1rem;
+  color: var(--color-white-2);
+}
+
+.cover-title {
+  letter-spacing: var(--letter-spacing);
+  text-transform: capitalize;
+}
+
+.cover-content {
+  line-height: 2;
+  width: 70vw;
+  min-width: 180px;
+  font-weight: 300;
+}
+
+.btn {
+  padding: 3rem 3rem 3rem;
+}
+
+.home-btn {
+  line-height: 1.5;
+  text-align: left;
+  max-width: 10.5rem;
+  width: 40%;
+  border: 3px solid var(--color-orange);
+  background: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+
+.home-btn a {
+  font-size: 1rem;
+  color: var(--color-orange);
+  text-transform: capitalize;
+  letter-spacing: var(--letter-spacing);
+  transition: var(--transition);
+}
+.home-btn:hover {
+  background: var(--color-orange);
+}
+.home-btn:hover a {
+  color: var(--color-white-1);
+}
+
+@media screen and (min-width: 768px) {
+  .cover {
+    background: linear-gradient(
+        to bottom,
+        rgb(241, 83, 39, 0.6),
+        rgba(0, 0, 0, 0.7)
+      ),
+      url("../images/image-2.jpeg") center/cover no-repeat;
+  }
+  .cover-title {
+    font-size: 4rem;
+  }
+}
