@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+:root {
+  --color-orange: #f15025;
+  --color-grey: #afafaf;
+  --color-black: #222;
+  --color-white-1: #fff;
+  --color-white-2: #f7f7f7;
+  --letter-spacing: 0.2rem;
+  --transition: all 0.3s linear;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  font-family: 'Fira Code', monospace;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  background: var(--color-grey);
+}
+
+.nav-center {
+  width: 95vw;
+  margin: 0 auto;
+  margin-left: 1.5rem;
+}
+
+.nav-link {
+  padding: 1rem;
+}
+
+.nav-link a {
+  text-transform: capitalize;
+  font-size: 1rem;
+  color: var(--color-orange);
+  letter-spacing: var(--letter-spacing);
+  transition: var(--transition);
+}
+
+.nav-link a:hover {
+  color: var(--color-black);
+}
+
+@media screen and (min-width: 992px) {
+  .nav-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+  }
+}
